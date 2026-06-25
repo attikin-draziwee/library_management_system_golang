@@ -1,6 +1,9 @@
 package utils
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func StatusBooleanToString(status bool) string {
 	switch status {
@@ -14,15 +17,17 @@ func StatusBooleanToString(status bool) string {
 }
 
 func StatusStringToBoolean(status string) (bool, error) {
-	if len(status) == 0 {
+	var trimLowerStatus string = strings.TrimSpace(strings.ToLower(status))
+
+	if len(trimLowerStatus) == 0 {
 		return false, fmt.Errorf("Статус не может быть пустым.")
 	}
 
-	if status != Agree && status != Disagree {
+	if trimLowerStatus != Agree && trimLowerStatus != Disagree {
 		return false, fmt.Errorf("Неверный формат ввода (только \"да\" или \"нет\")")
 	}
 
-	switch status {
+	switch trimLowerStatus {
 	case "да":
 		return true, nil
 	case "нет":

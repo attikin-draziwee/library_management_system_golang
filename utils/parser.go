@@ -47,7 +47,7 @@ func ParseBookLine(line string) (id int, title, author string, year int, availab
 	}
 
 	// Parse available
-	var availableString string = strings.ToLower(strings.TrimSpace(scanner.Text()))
+	var availableString string = strings.ToLower(strings.TrimSpace(data[4]))
 
 	available, err = StatusStringToBoolean(availableString)
 	if err != nil {
