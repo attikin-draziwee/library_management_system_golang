@@ -35,11 +35,22 @@ func main() {
 	// 	utils.DisplayLine(book)
 	// }
 	// storage.AppendBook(utils.FormatBookLine(16, "Шата", "Ри Гува", 2024, true))
-	users, err := storage.SearchUsersByQuery("Никита")
-	if err != nil {
-		utils.DisplayLine(err)
-	}
-	for _, user := range users {
-		utils.DisplayLine(user)
-	}
+	// users, err := storage.SearchUsersByQuery("Никита")
+	// if err != nil {
+	// 	utils.DisplayLine(err)
+	// }
+	// for _, user := range users {
+	// 	utils.DisplayLine(user)
+	// }
+	// utils.Display(service.GenerateNextUserID())
+	// utils.Display(service.GenerateNextUserID())
+	// utils.Display(service.GenerateNextUserID())
+
+	// err := service.AddUser("Джон", "john228eax.you")
+	// fmt.Println(err)
+	// service.ListUsers()
+	// service.SearchUsers("ник")
+	// exists, name, err := service.UserExists(19)
+	// utils.DisplayLine(exists, name, err)
+	// service.DeleteUser(3)
 }

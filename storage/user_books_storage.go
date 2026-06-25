@@ -10,7 +10,7 @@ import (
 )
 
 func GetUserBooksFilePath(userID int) string {
-	filepath := filepath.Join(userBooksDir, strconv.Itoa(userID))
+	filepath := filepath.Join(userBooksDir, strconv.Itoa(userID)+".txt")
 	return filepath
 }
 
