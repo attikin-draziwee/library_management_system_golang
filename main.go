@@ -30,9 +30,16 @@ func main() {
 
 	// utils.Display(storage.FindBookLineByID(5))
 	// utils.DisplayLine(storage.GetBookInfo(7))
-	books, _ := storage.SearchBooksByQuery("")
-	for _, book := range books {
-		utils.DisplayLine(book)
-	}
+	// books, _ := storage.SearchBooksByQuery("")
+	// for _, book := range books {
+	// 	utils.DisplayLine(book)
+	// }
 	// storage.AppendBook(utils.FormatBookLine(16, "Шата", "Ри Гува", 2024, true))
+	users, err := storage.SearchUsersByQuery("Никита")
+	if err != nil {
+		utils.DisplayLine(err)
+	}
+	for _, user := range users {
+		utils.DisplayLine(user)
+	}
 }
