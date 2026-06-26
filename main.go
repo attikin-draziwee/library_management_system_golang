@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"github.com/attikin-draziwee/library_management_system_golang/service"
 	"github.com/attikin-draziwee/library_management_system_golang/storage"
 	"github.com/attikin-draziwee/library_management_system_golang/utils"
 )
@@ -53,4 +54,7 @@ func main() {
 	// exists, name, err := service.UserExists(19)
 	// utils.DisplayLine(exists, name, err)
 	// service.DeleteUser(3)
+	// fmt.Println(service.BorrowBook(10, 11))
+	// service.ListBook()
+	service.ListUserBooks(10)
 }
